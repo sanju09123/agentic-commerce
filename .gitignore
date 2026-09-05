@@ -1,0 +1,24 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Backend
+agentic-commerce/.idea/
+agentic-commerce/target/
+agentic-commerce/*.iml
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

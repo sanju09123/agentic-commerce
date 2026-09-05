@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: agentic-commerce
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/agentic_commerce
+    username: postgres
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  ai:
+    google:
+      genai:
+        api-key: ${GOOGLE_API_KEY}
+        chat:
+          options:
+            model: gemini-3.6-flash
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+razorpay:
+  key-id: ${RAZORPAY_KEY_ID}
+  key-secret: ${RAZORPAY_KEY_SECRET}
+
+jwt:
+  secret: ${JWT_SECRET}
